@@ -8,13 +8,28 @@
 </head>
 <body>
 
-  <script type="text/x-handlebars">
-      <ul class="nav well">
-          {{#each item in model}}
-          <li>{{item.name}}</a></li>
-          {{/each}}
-      </ul>
-  </script>
+    <script type="text/x-handlebars">
+        <div class="container">
+            {{outlet}}
+        </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="races">
+        <div class="masthead">
+            <h3 class="muted">Welcome to Blood Bowl Team</h3>
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <ul class="nav">
+                            {{#each item in model}}
+                            <li><a href="#">{{item.name}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
 
   <script src="js/libs/jquery-1.10.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>

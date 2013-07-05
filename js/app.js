@@ -1,6 +1,10 @@
 App = Ember.Application.create();
 
-App.ApplicationRoute = Ember.Route.extend({
+App.Router.map(function() {
+    this.resource('races', { path: '/' });
+});
+
+App.RacesRoute = Ember.Route.extend({
     model: function() {
         return App.Race.find();
     }
